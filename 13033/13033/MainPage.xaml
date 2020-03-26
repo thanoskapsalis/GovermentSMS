@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="_13033.MainPage"
+             BackgroundColor="#495550">
+
+    <Grid Padding="20">
+        <StackLayout VerticalOptions="Center">
+            <Image Source="sms.png" HorizontalOptions="CenterAndExpand" Scale="1"/>
+            <Label Text="Καλωσορίσατε !" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontSize="Title"/>
+            <Label Text="Πληκρτρολογήστε τα στοιχεία σας" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+            <Label></Label>
+            <Entry PlaceholderColor="Black" BackgroundColor="Transparent" TextColor="Black" x:Name="name" Placeholder="Ονοματεπώνυμο"  />
+            <Entry PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="address" TextColor="Black" Placeholder="Διεύθυνση Κατοικίας"/>
+            <Picker x:Name="reason" Title="Επιλογή λόγου μετακίνησης" TextColor="Black" BackgroundColor="Transparent" >
+                <Picker.Items>
+                    <x:String>1. Μετάβαση σε φαρμακείο ή επίσκεψη στον γιατρό, εφόσον αυτό συνιστάται μετά από σχετική επικοινωνία.</x:String>
+                    <x:String>2. Μετάβαση σε εν λειτουργία κατάστημα προμηθειών αγαθών πρώτης ανάγκης (σούπερ μάρκετ, μίνι μάρκετ), όπου δεν είναι δυνατή η αποστολή τους.</x:String>
+                    <x:String>3. Μετάβαση στην τράπεζα, στο μέτρο που δεν είναι δυνατή η ηλεκτρονική συναλλαγή.</x:String>
+                    <x:String>4. Κίνηση για παροχή βοήθειας σε ανθρώπους που βρίσκονται σε ανάγκη.</x:String>
+                    <x:String>5. Μετάβαση σε τελετή (π.χ. κηδεία, γάμος, βάφτιση) υπό τους όρους που προβλέπει ο νόμος ή μετάβαση διαζευγμένων γονέων ή γονέων που τελούν σε διάσταση που είναι αναγκαία για τη διασφάλιση της επικοινωνίας γονέων και τέκνων, σύμφωνα με τις κείμενες διατάξεις.</x:String>
+                    <x:String>6. Σωματική άσκηση σε εξωτερικό χώρο ή κίνηση με κατοικίδιο ζώο, ατομικά ή ανά δύο άτομα, τηρώντας στην τελευταία αυτή περίπτωση την αναγκαία απόσταση 1,5 μέτρου.</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button x:Name="Send" BackgroundColor="#00FFFF" BorderWidth="2" HorizontalOptions="Center" BorderRadius="20" TextColor="Black" Text="ΑΠΟΣΤΟΛΗ" Clicked="Send_Clicked"></Button>
+
+        </StackLayout>
+        <Label x:Name="Message" HorizontalOptions="Center" Text="Τα στοιχεία θα αποθηκευτούν για μελλονιτκή χρήση" VerticalOptions="End" FontSize="Small" TextColor="Black"/>
+    </Grid>
+    
+</ContentPage>
